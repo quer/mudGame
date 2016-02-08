@@ -1,0 +1,89 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #3a7bd5;
+  background-image: -webkit-radial-gradient(top, circle cover, #00d2ff 0%, #3a7bd5 80%);
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+textarea, input{
+  outline: none;
+}
+#container{
+	height: 100%;
+  	width: 100%;
+  	min-height: 800px;
+}
+.console{
+	width: 600px;
+	height: 100%;
+	min-height: 800px;
+	border-right: double white;
+	float: left;
+}
+#game{
+	width:auto;
+	height: 100%;
+	margin-left: 600px;
+}
+#map{
+  width: 503px;
+  height: 503px;
+  border-bottom: double white;
+  border-right: double white;
+  background-color: black;
+  cursor:default;
+}
+#map div, #editer #charAjax div{
+  width: 20px;
+  height: 20px;
+  float: left;
+  font-size: 21px;
+  text-align: center;
+  font-weight: bold;
+}
+#map div.green, #editer div.green{
+  color: green;
+}
+
+#map div.blue, #editer div.blue{
+  color: blue;
+}
+
+#map div.white, #editer div.white{
+  color: white;
+}
+
+#map div.gray, #editer div.gray{
+  color: gray;
+}
+
+
+#map div.brown, #editer div.brown{
+  color: brown;
+}
+
+#editer {
+    position:absolute;
+    top: 300px;
+    right: 200px;
+    width:150px;
+    height:200px;
+    border:double white;
+    
+}
+
+#charAjax, #colorAjax {
+    width: 150px !important;
+    height: 100px !important;
+    float: left;
+    position:relative;
+}

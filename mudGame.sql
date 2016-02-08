@@ -1,0 +1,43 @@
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+
+CREATE TABLE IF NOT EXISTS `skills` (
+  `ID` int(255) NOT NULL AUTO_INCREMENT,
+  `userid` int(255) NOT NULL,
+  `Strength` int(255) NOT NULL DEFAULT '0',
+  `Dexterity` int(255) NOT NULL DEFAULT '0',
+  `Health` int(255) NOT NULL DEFAULT '0',
+  `Energy` int(255) NOT NULL DEFAULT '0',
+  `Gold` int(255) NOT NULL DEFAULT '0',
+  `QuestPoints` int(255) NOT NULL DEFAULT '0',
+  `Level` int(255) NOT NULL DEFAULT '0',
+  `ExpLevel` int(255) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+INSERT INTO `skills` (`ID`, `userid`, `Strength`, `Dexterity`, `Health`, `Energy`, `Gold`, `QuestPoints`, `Level`, `ExpLevel`) VALUES
+(1, 1, 118, 99, 1828, 1153, 2432519, 5787, 57, 687),
+(2, 5, 0, 0, 0, 0, 0, 0, 0, 0);
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL,
+  `x` int(11) NOT NULL DEFAULT '12',
+  `y` int(11) NOT NULL DEFAULT '12',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+INSERT INTO `user` (`ID`, `name`, `pass`, `x`, `y`) VALUES
+(1, 'quer', 'quer', 12, 12),
+(5, 'test', 'test', 12, 12);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

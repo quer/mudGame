@@ -1,0 +1,146 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #3a7bd5;
+  background-image: -webkit-radial-gradient(top, circle cover, #00d2ff 0%, #3a7bd5 80%);
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+table, tr, td{
+  border:none;
+}
+textarea, input{
+  outline: none;
+}
+#container{
+	height: 100%;
+  	width: 100%;
+  	min-height: 800px;
+}
+.console{
+	width: 600px;
+	height: 100%;
+	min-height: 800px;
+	border-right: double white;
+	float: left;
+}
+.console .terminal {
+  padding: 4px;
+  background-color: black;
+  opacity: 0.7;
+  height: 100%;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 200;
+  font-size: 14px;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  font-weight: bold;
+}
+.console .terminal::after {
+  content: "|";
+  animation: blink 2s steps(1) infinite;
+}
+
+.prompt {
+  color: #bde371;
+}
+
+.path {
+  color: #5ed7ff;
+}
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+
+#game{
+	width:auto;
+	height: 100%;
+	margin-left: 600px;
+}
+#map{
+  width: 503px;
+  height: 503px;
+  border-bottom: double white;
+  border-right: double white;
+  background-color: black;
+}
+#map div{
+  width: 20px;
+  height: 20px;
+  float: left;
+  font-size: 21px;
+  text-align: center;
+  font-weight: bold;
+}
+#map .green{
+  color: green;
+}
+.green{
+  color: #ADFF2F;
+}
+
+.blue{
+  color: blue;
+}
+
+.white{
+  color: white;
+}
+
+.red{
+  color: #FA8072;
+}
+
+.gray{
+  color: gray;
+}
+
+.brown{
+  color: brown;
+}
+
+.Goldenrod{
+  color: #DAA520;
+}
+
+.Aqua{
+  color: #00FFFF;
+}
+
+#life {
+  width: 255px;
+  height: auto;
+  border-bottom: double white;
+  border-right: double white;
+  background-color: black;
+  color: green;
+  position: relative;
+}
+#life table {
+  width: 100%;
+}
+#life table tr {
+  width: 100%;
+  height: 20px;
+}
+#life .element{
+  width: 150px;
+}
+#life .values{
+  
+}

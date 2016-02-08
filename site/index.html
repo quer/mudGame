@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>mud game</title>
+    <link rel="stylesheet" type="text/css" href="site/css.css" />
+</head>
+<body>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200' rel='stylesheet' type='text/css'>
+    <div id="container">
+        <div class="console">
+            <div class="terminal"></div>
+        </div>
+        <div id="game">
+            <div id="map">
+
+                <!-- linie 0 -->
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <!-- linie 1 -->
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 2 -->
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 3 -->
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">-</div>
+                <div class="white">-</div>
+                <div class="white">-</div>
+                <div class="white">-</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 4 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">-</div>
+                <div class="white">-</div>
+                <div class="white">-</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <!-- linie 5 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="blue">~</div>
+                <!-- linie 6 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="white">=</div>
+                <div class="blue">~</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 7 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 8 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 9 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">?</div>
+                <div class="white">#</div>
+                <div class="white">=</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 10 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 11 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 12 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">?</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">=</div>
+                <div class="white">#</div>
+                <div class="white">-</div>
+                <div class="white">-</div>
+                <div class="white">-</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 13 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 14 -->
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="white">=</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 15 -->
+                <div class="blue">~</div>
+                <div class="green">^</div>
+                <div class="white">#</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 16 -->
+                <div class="blue">~</div>
+                <div class="green">^</div>
+                <div class="white">#</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="green">^</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 17 -->
+                <div class="blue">~</div>
+                <div class="green">^</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 18 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 19 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 20 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 21 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="white">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="white">=</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 22 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="white">.</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 23 -->
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="white">?</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="green">#</div>
+                <div class="blue">~</div>
+                <!-- linie 24 -->
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+                <div class="blue">~</div>
+            </div>
+            <div id="life">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="element">
+                            Strength
+                        </td>
+                        <td class="values">
+                            : <span class="Aqua">[</span><span class="white" id="ajaxStr"> </span><span class="Aqua">]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="element">
+                            Dexterity
+                        </td>
+                        <td class="values">
+                            : <span class="Aqua">[</span><span class="white" id="ajaxDex">  </span><span class="Aqua">]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="element">
+                        </td>
+                        <td class="values"></td>
+                    </tr>
+                    <tr>
+                        <td class="element">
+                            Health
+                        </td>
+                        <td class="values">
+                            : <span class="Aqua">[</span><span class="white" id="ajaxHealth">  </span><span class="Aqua">]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="element">
+                            Energy
+                        </td>
+                        <td class="values">
+                            : <span class="Aqua">[</span><span class="white" id="ajaxEng"> </span><span class="Aqua">]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="element">
+                        </td>
+                        <td class="values"></td>
+                    </tr>
+                    <tr>
+                        <td class="element">
+                            Gold
+                        </td>
+                        <td class="values">
+                            : <span class="Aqua">[</span><span class="Goldenrod" id="ajaxGold"> </span><span class="Aqua">]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="element">
+                            Quest Points
+                        </td>
+                        <td class="values">
+                            : <span class="Aqua">[</span><span class="white" id="ajaxQP"></span><span class="Aqua">]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="element">
+                            Level
+                        </td>
+                        <td class="values">
+                            : <span class="Aqua">[</span><span class="white" id="ajaxLvl"> </span><span class="Aqua">]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="element">
+                            Exp To Level
+                        </td>
+                        <td class="values">
+                            : <span class="Aqua">[</span><span class="white" id="ajaxExpL"> </span><span class="Aqua">]</span>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="site/jquery-2.1.4.min.js"></script>
+    <script src="site/Model/decode.js"></script>
+    <script src="site/Control/socket.js"></script>
+</body>
+</html>
