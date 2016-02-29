@@ -11,7 +11,9 @@ function decode (text) {
 				returnText += thisText;
 			}
 		}
-	};
+	}
+	returnText = returnText.split("|").join("\n");
+	returnText = returnText.split("---").join("<hr>");
 	return returnText;
 }
 function formatNumber(number)

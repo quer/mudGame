@@ -1,4 +1,5 @@
 var socket = io.connect();
+var lastEmit = new Date().getTime();
 var dotIndex = null;
 var dotNormalChar = null;
 var skills = null;
@@ -46,6 +47,8 @@ $(document).ready(function() {
 	function displayPrompt() {
 		terminal.append("<span class=\"prompt\">" + prompt + "</span> ");
 		terminal.append("<span class=\"path\">" + path + "</span> ");
+		var height = parseInt(terminal.height());
+		terminal.animate({scrollTop: height});
 	}
 
 	// Delete n number of characters from the end of our output
@@ -125,21 +128,27 @@ $(document).ready(function() {
 		}
 	});
 
-	// Get the date for our fake last-login
-	var date = new Date().toString();
-	date = date.substr(0, date.indexOf("GMT") - 1);
-
-	// Display last-login and promt
-	terminal.append("Last login: " + date + " on mukuduk\n");
+	terminal.append("Welcomen to mukuduk\n");
 	displayPrompt();
 	function doEmit(){
-		socket.emit('command', command, function (respons){
-			terminal.append(decode(respons)+"\n");
+		if (lastEmit + 3000 < new Date().getTime()) {
+			socket.emit('command', command, function (respons){
+				terminal.append(decode(respons)+"\n");
+				commandHistory.push(command);
+				historyIndex = commandHistory.length;
+				command = "";
+
+				displayPrompt();
+				lastEmit = new Date().getTime();
+			});
+		}else{
+			terminal.append("you have to whait : " + (((lastEmit - new Date().getTime()+ 3000) / 1000)) + " sec\n");
 			commandHistory.push(command);
 			historyIndex = commandHistory.length;
 			command = "";
 
 			displayPrompt();
-		});
+		}
+		
 	}
 });

@@ -5,6 +5,8 @@ require("fs").readdirSync(normalizedPath).forEach(function(file) {
 });*/
 
 var Commands = require('./Control/Commands');
+var UserContainer = require('./Model/userContainer');
+var NpcContainer = require('./Model/npcContainer');
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
@@ -12,8 +14,10 @@ var io = require('socket.io').listen(server);
 var port = 3000;
 var users = [];
 var game = {
-	users: []
+	users: UserContainer,
+	npcs: NpcContainer
 }
+console.log("all done loading");
 console.log("starter server on port "+port);
 server.listen(port);
 app.use("/site/", express.static(__dirname + '/site/'));

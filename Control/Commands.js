@@ -3,7 +3,8 @@ var normalizedPath = require("path").join(__dirname, "../Commands");
 require("fs").readdirSync(normalizedPath).forEach(function(file) {
   require("./../Commands/" + file);
 });
-
+console.log("Commands");
+console.log(commandsFun);
 module.exports = function (command, socket, game, callback) {
 	var args = command.split(" ");
 	var cmd = args[0];

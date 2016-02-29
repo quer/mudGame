@@ -1,7 +1,9 @@
 var mysql = require('./../Database/database');
-var skills = require('./../Model/skills');
+var userObj = require('./../Model/user');
 commandsFun["login"] = function (data, socket, game, callback) {
-	if (socket.user != undefined) {
+	if(data[0] == "help"){
+		callback("login help cmd call");
+	}else if (socket.user != undefined) {
 		callback("#red:you are allreay login as# #green:"+socket.user.name+"#")
 	}else{
 		if (data.length > 1) {
@@ -9,20 +11,12 @@ commandsFun["login"] = function (data, socket, game, callback) {
 				if (user.length <= 0) {
 					callback("#red:Login fail#");
 				}else{
-					var skill = new skills(user[0]);
-					var userObj = {
-						"name": user[0].name,
-						"id": user[0].id,
-						"x": user[0].x,
-						"y": user[0].y,
-						"skills": skill,
-						"socket": socket
-					}
-					socket.user = userObj;
-					game.users.push(userObj);
-					callback("#green:Welcommen to "+ userObj.name +"#");
-					socket.emit("mapPoss",(user[0].x + (user[0].y*25)));
-					socket.emit("skills", skill.toClient());
+					var newUserObj = new userObj(user[0], socket);
+					socket.user = newUserObj;
+					game.users.add(newUserObj);
+					callback("#green:Welcommen to "+ newUserObj.name +"#");
+					socket.emit("mapPoss",(newUserObj.x + (newUserObj.y*25)));
+					socket.emit("skills", newUserObj.skills.toClient());
 				}
 			}); 
 		}
@@ -31,5 +25,3 @@ commandsFun["login"] = function (data, socket, game, callback) {
 		}
 	}
 }
-console.log("login file");
-console.log(commandsFun);

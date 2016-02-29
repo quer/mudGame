@@ -1,6 +1,8 @@
 var mysql = require('./../Database/database');
 commandsFun["register"] = function (data, socket, game, callback) {
-	if (socket.user != undefined ) {
+	if(data[0] == "help"){
+		callback("register help cmd call");
+	}else if (socket.user != undefined ) {
 		callback("#red:You allready have a user#");
 	}else{
 		if (data.length > 1) {

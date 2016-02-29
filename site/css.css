@@ -19,6 +19,12 @@ table, tr, td{
 textarea, input{
   outline: none;
 }
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
 #container{
 	height: 100%;
   	width: 100%;
